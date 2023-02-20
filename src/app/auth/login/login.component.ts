@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 // MIS IMPORTACIONES
 import { AppState } from '../../app.reducer';
 import { AuthService } from '../../services/auth.service';
-import * as actionsUi from '../../shared/ui.actions';
+import * as actionsUi from '../../store/uiStore/ui.actions';
 import { Subscription } from 'rxjs';
 
 @Component({
