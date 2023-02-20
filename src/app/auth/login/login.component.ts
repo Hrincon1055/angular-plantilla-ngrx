@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
 export class LoginComponent implements OnInit, OnDestroy {
   public formLogin!: FormGroup;
   public isLoading: boolean = false;
-  private storeUi$!: Subscription;
+  private store$!: Subscription;
   constructor(
     private _fb: FormBuilder,
     private _authService: AuthService,
@@ -28,12 +28,12 @@ export class LoginComponent implements OnInit, OnDestroy {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
-    this.storeUi$ = this._store.select('ui').subscribe((ui) => {
+    this.store$ = this._store.select('ui').subscribe((ui) => {
       this.isLoading = ui.isLoading;
     });
   }
   ngOnDestroy(): void {
-    this.storeUi$.unsubscribe();
+    this.store$.unsubscribe();
   }
   public loginUser(): void {
     this._store.dispatch(actionsUi.isLoading());
