@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 // NGRX REDUCR
-import { appReducers } from './app.reducer';
+import { appReducers } from './store/app.reducer';
 // ENVIRONMENT
 import { environment } from 'src/environments/environment';
 // MIS MODULOS

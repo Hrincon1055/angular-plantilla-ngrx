@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 // MIS IMPORTACIONES
-import { AppState } from '../../app.reducer';
+import { AppState } from '../../store/app.reducer';
 import { AuthService } from '../../services/auth.service';
 import * as actionsUi from '../../store/uiStore/ui.actions';
 import { Subscription } from 'rxjs';
