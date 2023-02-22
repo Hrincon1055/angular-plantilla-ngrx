@@ -31,13 +31,18 @@
             <label class="form-label" for="form1Example23">Password</label>
           </div>
           <!-- Submit button -->
-          <div class="d-grid gap-2">
+          <div class="d-grid gap-2" *ngIf="!isLoading">
             <button
               type="submit"
               class="btn btn-primary btn-lg"
               [disabled]="formLogin.invalid"
             >
               Sign in
+            </button>
+          </div>
+          <div class="d-grid gap-2" *ngIf="isLoading">
+            <button type="button" class="btn btn-secondary btn-lg" disabled>
+              Espere
             </button>
           </div>
         </form>

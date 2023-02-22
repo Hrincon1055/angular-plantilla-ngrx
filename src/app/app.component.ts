@@ -8,14 +8,5 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit {
   constructor(private _authService: AuthService) {}
-  ngOnInit(): void {
-    // console.log('app.component LINE 12 =>');
-    // let user = JSON.parse(localStorage.getItem('user') || '{}');
-    // if (user.hasOwnProperty('token')) {
-    //   this._authService.renewTokenUser(user.token).subscribe(
-    //     (response) => {},
-    //     (error) => console.log(error)
-    //   );
-    // }
-  }
+  ngOnInit(): void {}
 }
